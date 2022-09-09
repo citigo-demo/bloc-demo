@@ -24,7 +24,7 @@ class AllGameWidget extends StatelessWidget {
                   child: CircularProgressIndicator(),
                 )
               : state.status.isError
-                  ? ErrorGameWidget()
+                  ? CommonErrorWidget()
                   : const SizedBox();
     });
   }

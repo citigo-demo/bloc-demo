@@ -1,3 +1,4 @@
+import 'package:bloc_demo/ui/home/widgets/add_number_widget/add_number_widget.dart';
 import 'package:bloc_demo/ui/home/widgets/all_games_widget/all_games_widget.dart';
 import 'package:bloc_demo/ui/home/widgets/category_widget/categories_widget.dart';
 import 'package:bloc_demo/ui/home/widgets/games_by_category_widget/game_by_category_widget.dart';
