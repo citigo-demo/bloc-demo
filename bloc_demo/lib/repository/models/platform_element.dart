@@ -4,7 +4,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'platform_element.g.dart';
 
-@JsonSerializable()
+@JsonSerializable(fieldRename:FieldRename.snake)
 class PlatformElement {
   final PlatformPlatform? platform;
   final DateTime? releasedAt;

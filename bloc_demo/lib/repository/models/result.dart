@@ -8,10 +8,11 @@ import 'package:json_annotation/json_annotation.dart';
 import 'added_by_status.dart';
 import 'esrb_rating.dart';
 import 'genre.dart';
+
 part 'result.g.dart';
 
-@JsonSerializable()
-class Result{
+@JsonSerializable(fieldRename: FieldRename.snake)
+class Result {
   final int id;
   final String? slug;
   final String? name;
@@ -41,7 +42,6 @@ class Result{
   final List<Genre>? tags;
   final EsrbRating? esrbRating;
   final List<ShortScreenshot>? shortScreenshots;
-
 
   Result(
       this.id,

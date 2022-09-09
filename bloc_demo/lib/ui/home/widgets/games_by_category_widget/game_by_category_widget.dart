@@ -17,7 +17,7 @@ class GamesByCategoryWidget extends StatelessWidget {
           return state.status.isSuccess ? GamesByCategorySuccessWidget(
               categoryName: state.categoryName, games: state.games) : state
               .status.isLoading
-              ? Center(child: CircularProgressIndicator(),)
+              ? const Center(child: CircularProgressIndicator(),)
               : state.status.isError ? ErrorGameWidget() : const SizedBox();
         });
   }

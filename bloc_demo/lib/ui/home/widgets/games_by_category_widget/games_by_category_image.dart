@@ -11,6 +11,7 @@ class GamesByCategoryImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print('game images:${backgroundImage}');
     return CachedNetworkImage(
       imageUrl: backgroundImage,
       imageBuilder: (context, imageProvider) => Stack(

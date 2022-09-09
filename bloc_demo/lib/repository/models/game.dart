@@ -5,7 +5,7 @@ import 'filters.dart';
 
 part 'game.g.dart';
 
-@JsonSerializable()
+@JsonSerializable(fieldRename:FieldRename.snake)
 class Game{
   final int? count;
   final String? next;

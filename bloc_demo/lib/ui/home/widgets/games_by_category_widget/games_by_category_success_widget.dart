@@ -1,3 +1,4 @@
+import 'package:bloc_demo/repository/models/game.dart';
 import 'package:bloc_demo/ui/home/widgets/games_by_category_widget/games_by_category_image.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -28,6 +29,7 @@ class GamesByCategorySuccessWidget extends StatelessWidget {
               padding: EdgeInsets.only(left: 24.0, right: 24.0),
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
+                print('Game json:name = ${games[index].name},background = ${games[index].backgroundImage}');
                 return GamesByCategoryImage(
                     name: games[index].name ?? 'No data',
                     backgroundImage: games[index].backgroundImage ?? '');

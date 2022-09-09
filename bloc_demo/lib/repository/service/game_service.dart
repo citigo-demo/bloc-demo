@@ -26,6 +26,7 @@ class GameService {
       if (extraParameters != null) {
         queryParameters.addAll(extraParameters);
       }
+      print("Url:${Uri.parse('$baseUrl/$url').replace(queryParameters: queryParameters)}");
       return Uri.parse('$baseUrl/$url').replace(queryParameters: queryParameters);
     }catch(error){
       return Uri.parse('');
@@ -33,15 +34,10 @@ class GameService {
   }
 
   Future<Game> getGames() async {
-    print('call get game');
     final response = await _httpClient.get(getUrl(url: 'games'));
 
-    print('get game res:${response.statusCode}');
-
     if (response.statusCode == 200) {
-      print('game data:${response.body}');
       if (response.body.isNotEmpty) {
-        print('data body:${response.body.length}');
         return Game.fromJson(json.decode(response.body));
       } else {
         throw ErrorEmptyResponse();
